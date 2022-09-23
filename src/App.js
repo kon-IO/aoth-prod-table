@@ -13,7 +13,7 @@ export default function App() {
   return (
     <main>
       <div class="h-screen">
-        <div className="min-h-[90%] my-4 flex flex-col gap-6 justify-center items-center">
+        <div className="min-h-full w-full flex justify-center items-center">
           <Table />
         </div>
       </div>
@@ -41,9 +41,7 @@ class Table extends React.Component {
 
   removeInd(ind) {
     const arr = this.state.data.slice();
-    console.log(arr);
     arr.splice(ind, 1);
-    console.log(arr);
     this.setState({
       data: arr,
     });
@@ -83,7 +81,6 @@ class Table extends React.Component {
     this.setState({
       data: newArr,
     });
-    console.log(newArr);
   }
 
   addRow() {
@@ -109,13 +106,13 @@ class Table extends React.Component {
   render() {
     const len = this.state.data.length;
     const arr = this.state.data.map((el, ind) => {
+      let ch = ind % 24;
+      ch = ch + 913 < 930 ? ch + 913 : ch + 914;
       return (
         <React.Fragment key={ind}>
           <tr>
             <td>
-              {ind + 913 < 930
-                ? String.fromCharCode(ind + 913)
-                : String.fromCharCode(ind + 914)}
+              {String.fromCharCode(ch)}
             </td>
             <td>
               <EditableTd
@@ -156,14 +153,14 @@ class Table extends React.Component {
     });
 
     return (
-      <>
+    <div className="my-8 flex flex-col gap-6 justify-center items-center w-full">
         <table className="table">
           <TabelHead />
           <tbody>{arr}</tbody>
         </table>
         <button
           type="button"
-          className="plusButton"
+          className="plusButton mb-4"
           aria-label="Add row"
           onClick={() => this.addRow()}
         >
@@ -180,7 +177,7 @@ class Table extends React.Component {
             ></path>
           </svg>
         </button>
-      </>
+      </div>
     );
   }
 }

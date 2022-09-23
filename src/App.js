@@ -200,12 +200,28 @@ function TabelHead() {
   );
 }
 
+// Thanks https://www.youtube.com/watch?v=cjIswDCKgu0
+// function debounce(cb, delay = 2000) {
+//   let timeout;
+
+//   return (...args) => {
+//     clearTimeout(timeout);
+//     timeout = setTimeout(() => {
+//       cb(...args);
+//     }, delay);
+//   };
+// }
+
 function EditableTd({ number, onBlur, ind, isX }) {
+  // const debouncer = debounce((e) => {
+  //   onBlur(ind, e, isX);
+  // });
   return (
     <div
       contentEditable="true"
       onBlur={(e) => onBlur(ind, e, isX)}
       onKeyDown={(e) => {
+        // debouncer(e);
         if (e.key === "Enter") {
           // Prevent newline from being typed
           e.preventDefault();

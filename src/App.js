@@ -1,13 +1,12 @@
 import React from "react";
 import "./App.css";
-import math, {
+import {
   format,
   abs,
   fraction as frac,
   subtract as sub,
   add,
   divide as div,
-  equal,
 } from "mathjs";
 
 export default function App() {

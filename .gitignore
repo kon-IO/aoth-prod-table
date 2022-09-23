@@ -18,6 +18,10 @@
 .env.test.local
 .env.production.local
 
+./src/reportWebVitals.js
+./src/App.test.js
+./src/setupTests.js
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

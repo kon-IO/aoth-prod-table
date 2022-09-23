@@ -41,7 +41,9 @@ class Table extends React.Component {
 
   removeInd(ind) {
     const arr = this.state.data.slice();
+    console.log(arr);
     arr.splice(ind, 1);
+    console.log(arr);
     this.setState({
       data: arr,
     });
@@ -134,7 +136,7 @@ class Table extends React.Component {
             <td></td>
             <td></td>
             <td>
-              <RemoveRowButton removeCb={() => this.removeInd()} />
+              <RemoveRowButton removeCb={() => this.removeInd(ind)} />
             </td>
           </tr>
           {ind === len - 1 ? (

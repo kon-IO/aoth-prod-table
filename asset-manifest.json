@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/aoth-prod-table/static/css/main.9163cdd1.css",
-    "main.js": "/aoth-prod-table/static/js/main.7348f476.js",
+    "main.js": "/aoth-prod-table/static/js/main.f09305df.js",
     "index.html": "/aoth-prod-table/index.html",
     "main.9163cdd1.css.map": "/aoth-prod-table/static/css/main.9163cdd1.css.map",
-    "main.7348f476.js.map": "/aoth-prod-table/static/js/main.7348f476.js.map"
+    "main.f09305df.js.map": "/aoth-prod-table/static/js/main.f09305df.js.map"
   },
   "entrypoints": [
     "static/css/main.9163cdd1.css",
-    "static/js/main.7348f476.js"
+    "static/js/main.f09305df.js"
   ]
 }

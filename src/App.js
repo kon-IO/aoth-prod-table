@@ -33,7 +33,7 @@ class Table extends React.Component {
     super(props);
     this.state = {
       data: [
-        [frac(40), frac(50), frac(1), frac(1)],
+        [frac(40), frac(50), frac(1, 3), frac(3)],
         [frac(10), frac(40)],
       ],
     };
